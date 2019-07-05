@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import { StyleSheet, Text, View, FlatList } from 'react-native';
-import { Query } from "react-apollo";
-import gql from "graphql-tag";
+import React from 'react';
+import { Text, FlatList } from 'react-native';
+import { Query } from 'react-apollo';
+import gql from 'graphql-tag';
 
 export default function ExchangeRates() {
   return (
@@ -22,9 +22,11 @@ export default function ExchangeRates() {
         return (
           <FlatList
             data={data.rates}
-            keyExtractor={(item) => item.currency}
+            keyExtractor={item => item.currency}
             renderItem={({ item }) => (
-              <Text>{item.currency}: {item.rate}</Text>
+              <Text>
+                {item.currency}: {item.rate}
+              </Text>
             )}
           />
         );

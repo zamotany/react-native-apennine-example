@@ -5,14 +5,18 @@ const ExchangeRates = React.lazy(() => import('./ExchangeRates'));
 
 export default class App extends Component {
   render() {
-    const loadTime = Math.abs(Date.now() - this.props.navigation.state.params.loadStartTimestamp);
+    const loadTime = Math.abs(
+      Date.now() - this.props.navigation.state.params.loadStartTimestamp
+    );
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>App 1</Text>
         <Text style={styles.body}>Load time: {loadTime} ms</Text>
         <View style={{ height: 400 }}>
-          <Suspense fallback={<Text>Loading</Text>}><ExchangeRates /></Suspense>
-          </View>
+          <Suspense fallback={<Text>Loading</Text>}>
+            <ExchangeRates />
+          </Suspense>
+        </View>
       </View>
     );
   }

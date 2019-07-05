@@ -3,10 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "react-native start",
-    "test": "jest",
-    "lint": "eslint .",
-    "haul": "haul start"
+    "start": "haul start",
+    "haul": "haul"
   },
   "dependencies": {
     "apollo-cache-inmemory": "^1.6.2",
@@ -26,7 +24,7 @@
     "@haul-bundler/babel-preset-react-native": "^0.6.0",
     "@haul-bundler/cli": "^0.6.0",
     "@haul-bundler/preset-0.59": "^0.6.1",
-    "@react-native-community/eslint-config": "^0.0.5",
+    "@callstack/eslint-config": "^6.1.0",
     "babel-jest": "^24.8.0",
     "eslint": "^6.0.1",
     "jest": "^24.8.0",
