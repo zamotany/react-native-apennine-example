@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "postinstall": "patch-package",
     "start": "haul start",
     "haul": "haul"
   },
@@ -12,6 +13,7 @@
     "apollo-link-http": "^1.5.15",
     "graphql": "^14.4.2",
     "graphql-tag": "^2.10.1",
+    "patch-package": "^6.1.2",
     "react": "16.8.6",
     "react-apollo": "^2.5.8",
     "react-native": "callstack/react-native#2bbdf1e7706fc6eb1b776f8f258ce437da9ac860",
@@ -21,10 +23,10 @@
   "devDependencies": {
     "@babel/core": "^7.5.0",
     "@babel/runtime": "^7.5.0",
+    "@callstack/eslint-config": "^6.1.0",
     "@haul-bundler/babel-preset-react-native": "^0.6.0",
     "@haul-bundler/cli": "^0.6.0",
     "@haul-bundler/preset-0.59": "^0.6.1",
-    "@callstack/eslint-config": "^6.1.0",
     "babel-jest": "^24.8.0",
     "eslint": "^6.0.1",
     "jest": "^24.8.0",
